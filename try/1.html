@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">abcdefg</div>
+</body>
+<script>
+    let con = prompt("輸入內容");
+    // console.log(con)
+    let div = document.querySelector("div");
+    //  \w 匹配數字和字母
+    console.log("abc".replace("a", "@"));
+    console.log("abc".replace(/\w/g, "D"))
+    let reg2 = new RegExp(con, "g");
+   div.innerHTML= div.innerHTML.replace(reg2, search => {
+        console.log(search)
+        return `<span style="color:red;">${search}</span>`
+    })
+</script>
+
+</html>
